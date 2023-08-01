@@ -1,0 +1,15 @@
+payload = [
+    {
+        time: new Date().getTime(),
+        device_id: msg.payload.end_device_ids.device_id,
+        air_pressure: msg.payload.uplink_message.decoded_payload.AirPressure,
+        battery_level: msg.payload.uplink_message.decoded_payload.BatteryLevel,
+        humidity: msg.payload.uplink_message.decoded_payload.Humidity,
+        movement: msg.payload.uplink_message.decoded_payload.Movement,
+        status: msg.payload.uplink_message.decoded_payload.Status,
+        temperature: msg.payload.uplink_message.decoded_payload.Temperature,
+        soil_moisture: msg.payload.uplink_message.decoded_payload.SoilMoisture
+    }
+    ]
+msg.payload = payload;
+return msg;
